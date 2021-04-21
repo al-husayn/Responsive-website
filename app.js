@@ -27,14 +27,14 @@ function FirmTechReg() {
 
     if (email.value == "") {
         window.alert(
-        "Please enter a valid e-mail address.");
+            "Please enter a valid e-mail address.");
         email.focus();
         return false;
     }
 
-    if (phone.value == "") {
+    if (phone.value != /^\d{10}$/) {
         window.alert(
-        "Please enter your telephone number.");
+            "Please enter a phone number.");
         phone.focus();
         return false;
     }
