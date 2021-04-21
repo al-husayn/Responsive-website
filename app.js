@@ -25,7 +25,7 @@ function FirmTechReg() {
         return false;
     }
 
-    if (email.value == "") {
+    if (email.value != /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) {
         window.alert(
             "Please enter a valid e-mail address.");
         email.focus();
@@ -34,13 +34,13 @@ function FirmTechReg() {
 
     if (phone.value != /^\d{10}$/) {
         window.alert(
-            "Please enter a phone number.");
+            "Please enter a valid phone number.");
         phone.focus();
         return false;
     }
 
-    if (password.value == "") {
-        window.alert("Please enter your password");
+    if (password.value != /^[A-Za-z]\w{7,14}$/) {
+        window.alert("Please your password is incorrect. Try again");
         password.focus();
         return false;
     }
